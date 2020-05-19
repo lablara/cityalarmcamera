@@ -18,7 +18,19 @@ Before using the EDU, one additional library has also to be installed through th
 
 pip3 install numpy
 
-As a second remark about the EDU and the GrovePi+, the GPS module operates through the serial port of Raspberry and thus the Bluetooth module needs to be deactivated in some versions
+As a second remark about the EDU and the GrovePi+, the GPS module operates through the serial port of Raspberry and thus the Bluetooth module needs to be deactivated in some versions, as well as some configurations for the system kernel may be required. For the Raspberry Pi 3:
+
+Step 1:
+in /boot/config.txt, add at the end of the file:
+dtoverlay=pi3-miniuart-bt
+dtoverlay=pi3-disable-bt
+enable_uart=1
+
+Step 2:
+in /boot/cmdline.txt remove:
+console=ttyAMA0,115200 console=tty1
+and add:
+plymouth.ignore-serial-consoles
 
 *******************************************************************
 
