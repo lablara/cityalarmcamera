@@ -10,7 +10,7 @@ All codes are written in Python3, using some additional libraries
 
 *******************************************************************
 
-The EDU is implemented around the GrovePi+ hardware framework.
+The EDU is implemented around the GrovePi+ hardware framework
 
 The GrovePi+ has to be installed and enabled, as specified by the manufacturer. The following link describes all the required steps to allow the use of GrovePi+ in the Raspberry Pi: https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/
 
@@ -32,18 +32,24 @@ console=ttyAMA0,115200 console=tty1
 and add:
 plymouth.ignore-serial-consoles
 
+The EDU also requires the OpenCV lib, which have to be installed. The following link describes all the required steps to install OpenCV (versions 4.x) and additional libraries: https://blog.piwheels.org/new-opencv-builds-including-opencv-4-x/
+
+Additionally, the following installation command is required:
+
+pip3 install matplotlib
+
 *******************************************************************
 
 For the EPU, the haversine lib has to be installed:
 
 pip3 install haversine
 
-For the EPU and the EAC, the paho-mqtt library has also to be installed, using the follwing command:
+For the EPU and the EAC, the paho-mqtt library has also to be installed, using the following command:
 
 pip3 install paho-mqtt
 
 *******************************************************************
 
-If the EAC_Map app is used, the folium library has to be installed through the following command:
+For the EAC app, the folium library has to be installed through the following command:
 
 pip3 install folium
