@@ -101,7 +101,6 @@ class groveGPS:
             print ("GPS module is unavailable. Latitude and longitude are set to default")
             return False
             
-       
     def validate(self, in_line):
         '''
         Runs regex validation on a GPGAA sentence.
