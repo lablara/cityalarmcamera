@@ -20,7 +20,7 @@ class Camera:
         self.myCamera = cv2.VideoCapture(0)
         
         # Basic configuration for the detection of fire
-        # This is a simple calibration since we are noßt using
+        # This is a simple calibration since we are not using
         # artifical inteligence for automatic detection
         self.lower_bound = np.array([10,10,100])
         self.upper_bound = np.array([100,255,255])
@@ -46,7 +46,7 @@ class Camera:
 
         check_if_fire_detected = cv2.countNonZero(image_binary)
    
-        if int(check_if_fire_detected) >= 2000:
+        if int(check_if_fire_detected) >= 20000:
         # Fire is detected!
             return True
         else:
